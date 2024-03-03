@@ -1,0 +1,90 @@
+.banniere {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  .contenu {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .blocs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .bloc {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .bloc h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .bloc p {
+    margin: 0;
+  }
+  
+  .avantages {
+    margin-bottom: 40px;
+  }
+  
+  .avantages h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .avantages ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .avantages li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .avantages li img {
+    margin-right: 10px;
+  }
+  
+  .avantages li h4 {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .avantages li p {
+    margin: 0;
+  }
+  
+  .bouton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0073b7;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .bouton:hover {
+    background-color: #005997;
+  }
+  
