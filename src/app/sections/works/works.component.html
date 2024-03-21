@@ -1,40 +1,91 @@
 <!-- Début Étapes de Travail -->
 <div class="work-steps" id="work-steps">
-  <h2 class="main-title">Comment ça marche ?</h2>
-  <div class="container">
-    <img src="/assets/imgs/work-steps.png" alt="" class="image" />
+  <h2 class="main-title">Générez des revenus avec Anicareful</h2>
+  <div class="row">
+      <div class="col-12">
+          <div class="product-info">
+              <div class="nav-main">
+                  <!-- Navigation par onglets -->
+                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item" *ngFor="let category of categories">
+                          <a class="nav-link" [class.active]="category === selectedCategory"
+                              (click)="selectCategory(category)">{{ category }}</a>
+                      </li>
+                  </ul>
+                  <!--/ Fin Navigation par onglets -->
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!-- Partie Veterinaire -->
+  <div class="container" *ngIf="selectedCategory === 'Veterinaire'">
+    <img src="/assets/imgs/medecin.jpg" alt="" class="image-m" />
     <div class="info">
       <div class="box">
         <img src="/assets/imgs/work-steps-1.png" alt="" />
         <div class="text">
-          <h3>Analyse d'entreprise</h3>
+          <h3>Flexibilité</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum
-            recusandae debitis vel.
+            Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
       </div>
       <div class="box">
         <img src="/assets/imgs/work-steps-2.png" alt="" />
         <div class="text">
-          <h3>Architecture</h3>
+          <h3>Paiements rapides</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum
-            recusandae debitis vel.
+            Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
       </div>
       <div class="box">
         <img src="/assets/imgs/work-steps-3.png" alt="" />
         <div class="text">
-          <h3>Développement</h3>
+          <h3>Simplicité</h3>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim nesciunt obcaecati quisquam quis laborum
-            recusandae debitis vel.
+            Lorem ipsum dolor sit amet consectetur.
           </p>
         </div>
       </div>
+      <button type="button" class="btn btn-primary enroll">Rejoignez-nous</button>
     </div>
+  </div>
+
+  <!-- Partie Gardien -->
+  <div class="container" *ngIf="selectedCategory === 'Gardien'">
+    <div class="info">
+      <div class="box">
+        <img src="/assets/imgs/work-steps-1.png" alt="" />
+        <div class="text">
+          <h3>Flexibilité</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="/assets/imgs/work-steps-2.png" alt="" />
+        <div class="text">
+          <h3>Paiements rapides</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <img src="/assets/imgs/work-steps-3.png" alt="" />
+        <div class="text">
+          <h3>Simplicité</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur.
+          </p>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary enroll">Rejoignez-nous</button>
+    </div>
+    <img src="/assets/imgs/pet-garde.jpg" alt="" class="image-g" />
   </div>
 </div>
 <!-- Fin Étapes de Travail -->

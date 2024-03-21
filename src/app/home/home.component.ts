@@ -9,6 +9,10 @@ import {GalleryComponent} from "../sections/gallery/gallery.component";
 import { WorksComponent } from "../sections/works/works.component";
 import { GardComponent } from "../sections/gard/gard.component";
 import { CardComponent } from "../sections/card/card.component";
+import { Blog0Component } from "../sections/blog0/blog0.component";
+import { Contact0Component } from "../sections/contact0/contact0.component";
+import { ProductComponent } from "../sections/product/product.component";
+import { HeaderComponent } from "../sections/header/header.component";
 
 @Component({
     selector: 'app-home',
@@ -25,7 +29,11 @@ import { CardComponent } from "../sections/card/card.component";
         GalleryComponent,
         WorksComponent,
         GardComponent,
-        CardComponent
+        CardComponent,
+        Blog0Component,
+        Contact0Component,
+        ProductComponent,
+        HeaderComponent
     ]
 })
 export class HomeComponent {

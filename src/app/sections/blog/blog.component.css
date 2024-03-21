@@ -1,3 +1,40 @@
+.nav-tabs {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	border:none;
+}
+.nav-tabs .nav-item {
+	margin-bottom: -1px;
+	display: inline-block;
+}
+.nav-tabs li a {
+	color: #333;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	margin: 5px;
+	padding: 3px 14px;
+	border-radius: 3px;
+	font-size: 18px;
+	font-weight: 500;
+  margin-bottom: 50px;
+}
+.nav-tabs li:last-child a{
+	border-color:transparent;
+} 
+.nav-tabs li a i{
+	margin-right:10px;
+}
+.nav-tabs li a.active,
+.nav-tabs li:hover a{
+	background:var(--main-color);
+	color:#fff;
+	border-color:transparent;
+}
+
+
+
 /* Start Articles */
 .articles {
   padding-top: var(--main-padding-top);
@@ -6,7 +43,7 @@
 }
 .articles .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
 }
 .articles .box {

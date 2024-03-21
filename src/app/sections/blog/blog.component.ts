@@ -13,10 +13,31 @@ import { CommonModule } from '@angular/common';
 })
 
 export class BlogComponent {
+  categories = ['santé', 'formation', 'comportement', 'nutrition']; 
+  selectedCategory = 'santé';
+
   articles = [
-    { title: 'Test Title 1', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit', image: '/assets/imgs/animal.jpeg' },
-    { title: 'Test Title 2', description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit', image: '/assets/imgs/animal7.jpeg' },
-    // Add more articles as needed
+    { category: 'santé', title: 'Article 1 Santé', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 1 sur la santé.', image: '/assets/imgs/cat-01.jpg' },
+    { category: 'santé', title: 'Article 2 Santé', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 2 sur la santé.', image: '/assets/imgs/cat-02.jpg' },
+    { category: 'santé', title: 'Article 3 Santé', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 3 sur la santé.', image: '/assets/imgs/cat-03.jpg' },
+    { category: 'formation', title: 'Article 1 Formation', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 1 sur la formation.', image: '/assets/imgs/cat-04.jpg' },
+    { category: 'formation', title: 'Article 2 Formation', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 2 sur la formation.', image: '/assets/imgs/cat-05.jpg' },
+    { category: 'formation', title: 'Article 3 Formation', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 3 sur la formation.', image: '/assets/imgs/cat-06.jpg' },
+    { category: 'comportement', title: 'Article 1 Comportement', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 1 sur le comportement.', image: '/assets/imgs/cat-07.jpg' },
+    { category: 'comportement', title: 'Article 2 Comportement', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 2 sur le comportement.', image: '/assets/imgs/cat-08.jpg' },
+    { category: 'comportement', title: 'Article 3 Comportement', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 3 sur le comportement.', image: '/assets/imgs/cat-05.jpg' },
+    { category: 'nutrition', title: 'Article 1 Nutrition', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 1 sur la nutrition.', image: '/assets/imgs/cat-01.jpg' },
+    { category: 'nutrition', title: 'Article 2 Nutrition', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 2 sur la nutrition.', image: '/assets/imgs/cat-07.jpg' },
+    { category: 'nutrition', title: 'Article 3 Nutrition', content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. At animi mollitia est Contenu de l\'article 3 sur la nutrition.', image: '/assets/imgs/cat-04.jpg' },
   ];
+
+  get filteredArticles() {
+    return this.articles.filter(article => article.category === this.selectedCategory);
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+  }
+  
 }
 

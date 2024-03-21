@@ -1,4 +1,39 @@
-/* Start Work Steps */
+.nav-tabs {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	border:none;
+}
+.nav-tabs .nav-item {
+	margin-bottom: -1px;
+	display: inline-block;
+}
+.nav-tabs li a {
+	color: #333;
+	text-transform: uppercase;
+	display: inline-block;
+	position: relative;
+	margin: 5px;
+	padding: 3px 14px;
+	border-radius: 3px;
+	font-size: 18px;
+	font-weight: 500;
+  margin-bottom: 50px;
+}
+.nav-tabs li:last-child a{
+	border-color:transparent;
+} 
+.nav-tabs li a i{
+	margin-right:10px;
+}
+.nav-tabs li a.active,
+.nav-tabs li:hover a{
+	background:var(--main-color);
+	color:#fff;
+	border-color:transparent;
+}
+
+/* Début Étapes de Travail */
 .work-steps {
     padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
@@ -15,9 +50,15 @@
       flex-direction: column;
     }
   }
-  .work-steps .image {
-    max-width: 100%;
+  .work-steps .image-m {
+    max-width: 40%;
     margin-right: 100px;
+    border-radius: 10px;
+  }
+  .work-steps .image-g {
+    max-width: 40%;
+    margin-left: 100px;
+    border-radius: 10px;
   }
   @media (max-width: 991px) {
     .work-steps .image {
@@ -26,7 +67,7 @@
   }
   .work-steps .info .box {
     background-color: #f6f5f5;
-    padding: 30px;
+    padding: 25px;
     margin-bottom: 20px;
     border-radius: 6px;
     display: flex;
@@ -76,4 +117,15 @@
     margin: 10px 0 0;
     font-size: 18px;
   }
-  /* End Work Steps */
+
+  /* Style du bouton "Rejoignez-nous" */
+  .enroll {
+    background-color: var(--main-color);
+    border: none;
+	  text-transform: uppercase;
+	  padding: 3px 14px;
+	  border-radius: 3px;
+	  font-size: 18px;
+	  font-weight: 500;
+  }
+  /* Fin Étapes de Travail */

@@ -1,3 +1,142 @@
+.masthead {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 35rem;
+  padding: 15rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("/assets/imgs/home.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  margin-bottom: var(--main-padding-bottom);
+}
+.masthead h1, .masthead .h1 {
+  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.8rem;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+.masthead h2, .masthead .h2 {
+  max-width: 20rem;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .masthead h1, .masthead .h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .masthead {
+    height: 100vh;
+    padding: 0;
+  }
+  .masthead h1, .masthead .h1 {
+    font-size: 6.5rem;
+    line-height: 6.5rem;
+    letter-spacing: 0.8rem;
+  }
+  .masthead h2, .masthead .h2 {
+    max-width: 30rem;
+    font-size: 1.25rem;
+  }
+}
+
+
+
+
+/* ===== Buttons Css ===== */
+.error-content .primary-btn {
+  background: var(--primary);
+  color: var(--white);
+  box-shadow: var(--shadow-2);
+}
+.error-content .active.primary-btn, .error-content .primary-btn:hover, .error-content .primary-btn:focus {
+  background: var(--primary-dark);
+  color: var(--white);
+  box-shadow: var(--shadow-4);
+}
+.error-content .deactive.primary-btn {
+  background: var(--gray-4);
+  color: var(--dark-3);
+  pointer-events: none;
+}
+
+/*===== ERROR ONE Style =====*/
+.error-content {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.error-content .error-404 {
+  font-size: 98px;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 90px;
+}
+.error-content .sub-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+  margin-top: 16px;
+}
+.error-content .text {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--dark-3);
+  margin-top: 8px;
+}
+.error-content .error-form {
+  max-width: 410px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+}
+.error-content .error-form i {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  font-size: 24px;
+  color: var(--primary);
+}
+.error-content .error-form input {
+  width: 100%;
+  height: 46px;
+  padding-left: 60px;
+  padding-right: 30px;
+  border-radius: 50px;
+  border: 2px solid var(--gray-4);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--dark-3);
+}
+.error-content .error-form input:focus {
+  border-color: var(--primary);
+}
+.error-content .error-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media (max-width: 767px) {
+  .error-content .error-btn {
+    position: relative;
+    width: 100%;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .error-content .primary-btn {
+    width: 100%;
+  }
+}
+
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -120,107 +259,3 @@
     transform: translateY(-10px);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Start Landing */
-/* .landing {
-  position: relative;
-}
-.landing::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -40px;
-  width: 100%;
-  height: 100%;
-  background-color: #ececec;
-  z-index: -1;
-  transform: skewY(-6deg);
-  transform-origin: top left;
-}
-.landing .container {
-  min-height: calc(100vh - 72px);
-  display: flex;
-  align-items: center;
-  padding-bottom: 120px;
-}
-.landing .text {
-  flex: 1;
-}
-@media (max-width: 991px) {
-  .landing .text {
-    text-align: center;
-  }
-}
-.landing .text h1 {
-  font-size: 40px;
-  margin: 0;
-  letter-spacing: -2px;
-}
-@media (max-width: 767px) {
-  .landing .text h1 {
-    font-size: 28px;
-  }
-}
-.landing .text p {
-  font-size: 23px;
-  line-height: 1.7;
-  margin: 5px 0 0;
-  color: #666;
-  max-width: 500px;
-}
-@media (max-width: 991px) {
-  .landing .text p {
-    margin: 10px auto;
-  }
-}
-@media (max-width: 767px) {
-  .landing .text p {
-    font-size: 18px;
-  }
-}
-.landing .image img {
-  position: relative;
-  width: 600px;
-  animation: up-and-down 5s linear infinite;
-}
-@media (max-width: 991px) {
-  .landing .image {
-    display: none;
-  }
-}
-.landing .go-down {
-  color: var(--main-color);
-  position: absolute;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: var(--main-transition);
-}
-.landing .go-down:hover {
-  color: var(--main-color-alt);
-}
-.landing .go-down i {
-  animation: bouncing 1.5s infinite;
-} */
-/* End Landing */
